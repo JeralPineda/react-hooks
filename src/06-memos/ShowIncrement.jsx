@@ -8,7 +8,7 @@ export const ShowIncrement = memo(({ increment }) => {
       //
       className="btn btn-primary"
       onClick={() => {
-        increment();
+        increment(2);
       }}
     >
       Incrementar

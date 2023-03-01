@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { ShowIncrement } from './ShowIncrement';
 
 export const CallbackHook = () => {
@@ -6,9 +6,11 @@ export const CallbackHook = () => {
 
   //Igual que el useMemo, solo que sirve para memorizar funciones, regresa una función memorizada,
   //que se volverá a procesar cuando algo cambie
-  const increment = useCallback(() => {
-    setCounter((value) => value + 1);
+  const increment = useCallback((value) => {
+    setCounter((c) => c + value);
   }, []);
+
+  useEffect(() => {}, [increment]);
 
   // const increment = () => {
   //   setCounter(counter + 1);
