@@ -1,9 +1,17 @@
 import React from 'react';
 
-export const TodoItem = ({ todo, handleRemoveTodo }) => {
+export const TodoItem = ({ todo, handleRemoveTodo, onToggleTodo }) => {
   return (
-    <>
-      <span className="align-self-center">{todo.description}</span>
+    <li className="list-group-item d-flex justify-content-between">
+      <span
+        //
+        style={{ cursor: 'pointer' }}
+        onClick={() => onToggleTodo(todo.id)}
+        className={todo.done ? `align-self-center text-decoration-line-through` : 'align-self-center'}
+      >
+        {todo.description}
+      </span>
+
       <button
         //
         type="button"
@@ -12,6 +20,6 @@ export const TodoItem = ({ todo, handleRemoveTodo }) => {
       >
         Borrar
       </button>
-    </>
+    </li>
   );
 };
