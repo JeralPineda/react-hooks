@@ -15,6 +15,7 @@ export const TodoAdd = ({ handleNewTodo }) => {
     };
 
     handleNewTodo && handleNewTodo(newTodo);
+    onResetForm();
   };
 
   return (

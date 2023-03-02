@@ -20,7 +20,14 @@ export const TodoApp = () => {
   const [todos, dispatch] = useReducer(todoReducer, initialState);
 
   const handleNewTodo = (todo) => {
-    console.log({ todo });
+    //creando acción
+    const action = {
+      type: '[TODO] Add Todo',
+      payload: todo,
+    };
+
+    //Disparo la acción
+    dispatch(action);
   };
 
   return (
