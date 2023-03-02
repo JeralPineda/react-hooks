@@ -1,7 +1,7 @@
 import React from 'react';
 import { TodoItem } from './TodoItem';
 
-export const TodoList = ({ todos = [] }) => {
+export const TodoList = ({ todos = [], handleRemoveTodo }) => {
   return (
     <ul className="list-group">
       {todos.map((todo) => (
@@ -10,7 +10,7 @@ export const TodoList = ({ todos = [] }) => {
           key={todo.id}
           className="list-group-item d-flex justify-content-between"
         >
-          <TodoItem todo={todo} />
+          <TodoItem todo={todo} handleRemoveTodo={handleRemoveTodo} />
         </li>
       ))}
     </ul>
