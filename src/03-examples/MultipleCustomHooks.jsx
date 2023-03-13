@@ -5,7 +5,8 @@ export const MultipleCustomHooks = () => {
   const { counter, increment } = useCounter(1);
 
   const { data, isLoading, hasError } = useFetch(`https://pokeapi.co/api/v2/pokemon/${counter}`);
-  const { name, url } = !!data && data?.forms[0]; //? !undefined = true, !!undefined = false
+
+  const { name, url } = !!data && data[0]; //? !undefined = true, !!undefined = false
 
   return (
     <div>

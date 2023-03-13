@@ -14,7 +14,7 @@ export const useFetch = (url) => {
     const data = await response.json();
 
     setState({
-      data,
+      data: data?.forms,
       isLoading: false,
       hasError: null,
     });
