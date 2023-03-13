@@ -9,7 +9,7 @@ export const MultipleCustomHooks = () => {
 
   return (
     <div>
-      <h1>Breakin Bad Quotes</h1>
+      <h1>BreakingBad Quotes</h1>
       <hr />
 
       {isLoading ? <LoadingQuote /> : <Quote name={name} url={url} />}
