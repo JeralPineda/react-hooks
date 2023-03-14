@@ -4,7 +4,12 @@ import { todoReducer } from '../08-useReducer/todoReducer';
 const initialState = [];
 
 const init = () => {
-  return JSON.parse(localStorage.getItem('todos') || []);
+  let lc = null;
+  if (typeof window !== 'undefined') {
+    lc = localStorage.getItem('todos');
+  }
+
+  return JSON.parse(lc) || [];
 };
 
 export const useTodo = () => {
