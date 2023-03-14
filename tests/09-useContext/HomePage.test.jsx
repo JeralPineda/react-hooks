@@ -33,6 +33,6 @@ describe('Pruebas en <HomePage />', () => {
     expect(preTag.innerHTML).toContain(user.name);
     expect(preTag.innerHTML).toContain(user.id.toString());
 
-    screen.debug();
+    // screen.debug();
   });
 });
